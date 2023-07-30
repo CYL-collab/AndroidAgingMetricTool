@@ -1,0 +1,109 @@
+app_list: 
+  app_list_10_1: &app_list_10_1
+    - "com.heytap.browser" #oplus浏览器
+    - "com.tencent.qqmusic" #QQ音乐
+    - "com.oplus.camera"
+    - "com.tencent.news" #腾讯新闻
+    - "com.UCMobile" #UC浏览器
+    - "com.autonavi.minimap" #高德地图
+    - "com.ximalaya.ting.android" #喜马拉雅
+    - "com.gotokeep.keep" #keep
+    - "com.hunantv.imgo.activity" #芒果TV
+    - "com.meitu.meiyancamera" #美颜相机
+  app_list_10_2: &app_list_10_2
+    -  "me.ele" #饿了么
+    -  "com.wuba" #五八同城
+    -  "ctrip.android.view" #携程旅行
+    -  "com.smile.gifmaker" #快手
+    -  "com.tencent.weishi" #腾讯微视
+    -  "com.ss.android.article.news" #今日头条
+    -  "com.ss.android.article.video" #西瓜视频
+    -  "com.tencent.mtt" #QQ浏览器
+    -  "com.achievo.vipshop" #唯品会
+    -  "com.qiyi.video" #爱奇艺
+  app_list_10_3: &app_list_10_3
+    - "com.happyelements.AndroidAnimal" #开心消消乐
+    -  "com.kugou.android" #酷狗音乐
+    -  "com.gotokeep.keep" #keep
+    -  "com.hunantv.imgo.activity" #芒果TV
+    -  "com.meitu.meiyancamera" #美颜相机
+    -  "com.shizhuang.duapp" #得物
+    -  "com.dragon.read" #番茄小说
+    -  "com.xs.fm" #番茄畅听
+    -  "cn.missevan" #猫耳FM
+    -  "com.xingin.xhs" #小红书
+  app_list_30: &app_list_30
+    - "com.heytap.browser" #oplus浏览器
+    - "com.tencent.qqmusic" #QQ音乐
+    - "com.oplus.camera" 
+    - "com.tencent.news" #腾讯新闻
+    - "com.UCMobile" #UC浏览器
+    - "com.autonavi.minimap" #高德地图
+    - "com.ximalaya.ting.android" #喜马拉雅
+    - "com.gotokeep.keep" #keep
+    - "com.hunantv.imgo.activity" #芒果TV
+    - "com.meitu.meiyancamera" #美颜相机
+    - "me.ele" #饿了么
+    - "com.wuba" #五八同城
+    - "ctrip.android.view" #携程旅行
+    - "com.smile.gifmaker" #快手
+    - "com.tencent.weishi" #腾讯微视
+    - "com.ss.android.article.news" #今日头条
+    - "com.ss.android.article.video" #西瓜视频
+    - "com.tencent.mtt" #QQ浏览器
+    - "com.achievo.vipshop" #唯品会
+    - "com.qiyi.video" #爱奇艺
+    - "com.happyelements.AndroidAnimal" #开心消消乐
+    - "com.kugou.android" #酷狗音乐
+    - "com.gotokeep.keep" #keep
+    - "com.hunantv.imgo.activity" #芒果TV
+    - "com.meitu.meiyancamera" #美颜相机
+    - "com.shizhuang.duapp" #得物
+    - "com.dragon.read" #番茄小说
+    - "com.xs.fm" #番茄畅听
+    - "cn.missevan" #猫耳FM
+    - "com.xingin.xhs" #小红书
+  xiaobai_apps: &xiaobai_apps
+    - 'com.tencent.mm' 
+    - 'com.tencent.mobileqq' 
+    - 'com.sina.weibo' 
+    - 'com.eg.android.AlipayGphone' 
+    - 'com.taobao.taobao' 
+    - 'com.jingdong.app.mall' 
+    - 'com.sankuai.meituan' 
+    - 'com.upin.app' 
+    - 'com.baidu.BaiduMap' 
+    - 'com.Qunar' 
+    - 'com.baidu.searchbox' 
+    - 'com.MobileTicket' 
+    - 'com.youku.phone' 
+    - 'com.netease.cloudmusic' 
+    - 'com.zhihu.android' 
+    - 'com.alibaba.android.rimet' 
+    - 'com.ss.android.ugc.aweme' 
+    - 'tv.danmaku.bili' 
+    - 'com.tencent.tmgp.sgame' 
+    - 'com.tencent.tmgp.pubgmhd'
+
+base:
+  serial: 192.168.3.82:39823
+  working_path: d://Lab/Android
+  trace_path: d://Lab/Android/data/test/
+  test_app_list: *xiaobai_apps
+  stress_app_list: *app_list_10_2
+  stress_time_per_app: 0.5 # min
+  trace_interval: 10 # seconds
+  monkey_interval: 500 # ms
+  jank_threshold: 12 # set onetrace jank threshold by fps
+
+run_t&s:
+  duration: 100  # hours
+  t_xiaobai: 2  # minutes
+  t_stress: 300  # minutes
+
+run_stress:
+  duration: 100  # hours
+  sample_interval: 5 # rounds
+
+
+
